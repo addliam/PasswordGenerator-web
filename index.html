@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="title"><h2>PASSWORD GENERATOR</h2></div>
+        </header>
+        <main class="layout">
+            <div class="interactive">
+                <div class="passw_container">
+                    <p id="password">kj%51ghq8</p>
+                </div>
+                <div class="icons" id="refresh">
+                    <input id="refresh_btn" type="image" onclick="refreshClicked();" src="./images/icons8-refresh-30.png"/>
+                </div>
+                <div class="icons" id="copy">
+                    <input id="copy_btn" type="image" src="./images/icons8-copy-30.png"/>
+                </div>
+            </div>
+            <div class="passw_length_container">
+                <div class="range_input">
+                    <input type="range" autocomplete="off" value="8" step="1" id="length_password" name="length" min="1" max="20" >
+                </div>
+                <div class="text_length">
+                    <label for="length">Password length:</label><p id="length_password_value"></p>
+                </div>
+            </div>
+            <div class="passw_options">
+                <div class="option">
+                    <label class="switch">
+                        <input id="option1" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="text_option">
+                        <span>Include uppercase letters</span>
+                    </div>
+                </div>
+                <div class="option">
+                    <label class="switch">
+                        <input id="option2" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="text_option">
+                        <span>Include numbers</span>
+                    </div>
+                </div>
+                <div class="option">
+                    <label class="switch">
+                        <input id="option3" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="text_option">
+                        <span>Include symbols</span>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+        <footer class="foot">
+            <div class="container_foot">
+                <p>© 2022 - PassGenerator v1.0.1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="myscript.js"></script>
+</html>
