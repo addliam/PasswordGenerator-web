@@ -44,6 +44,7 @@ var opt1 = document.querySelector("#option1");
 var opt2 = document.querySelector("#option2");
 var opt3 = document.querySelector("#option3");
 // update value each time a switch is pressed
+const popUpContainer = document.querySelector(".pop-up");
 opt1.addEventListener("input",function () {
     {refreshClicked();}
 })
@@ -73,7 +74,15 @@ function refreshClicked(){
     createdPassword = main(lenghtPasswordInput,options);
     showPassword(createdPassword);
 }
+const showPopUp = () =>{
+    popUpContainer.style.display = "flex";
+    setTimeout(() => {
+        popUpContainer.style.display = "none";        
+    }, 2000);
+}
 function copyClicked(){
+    console.log("Copy clicked");
+    showPopUp();
     var passwordOut = document.querySelector("#password");
     navigator.clipboard.writeText(passwordOut.textContent);
 }
